@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height: 500px;
+            background-color: blueviolet;
+            margin-bottom: 15px;
+        }
+        .div2{
+            
+            
+        }
+        .active{
+            transition: 2s;
+            transform: scale(2,2);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div1"><img src="./maxresdefault.jpg" alt=""></div>
+    <div class="div2"><img class="img" src="./maxresdefault.jpg" alt=""></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+<script>
+
+var div_1 = document.querySelector('.div1');
+var img = document.querySelector('.img');
+window.addEventListener('load',()=>{
+    console.log(div_1.className);
+    // div_1.className = 'active';
+    console.log(div_1.className);
+})
+
+window.addEventListener('scroll',()=>{
+    var scrollx = window.scrollX;
+    var scrolly = window.scrollY;
+    console.log(scrollx,scrolly)
+
+
+
+    if(scrolly > 100 && scrolly<600){
+        img.className = 'active';
+        console.log('its work');    
+    }
+    else{
+        img.className = '';
+    }
+})
+
+//     function checkName(obj){
+//         console.log("print");
+//     var error = document.getElementById("err");
+
+//     if(obj.value == ""){
+//         error.innerHtml = "fill the number";
+//         obj.style.cssText = "border: 3px solid red";
+//     }else{
+//         obj.style.cssText = "border: 3px solid green";
+//     }
+// }
+
+</script>
+</body>
+</html>

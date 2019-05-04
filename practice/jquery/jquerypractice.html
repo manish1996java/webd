@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(
+            function(){ 
+                $("#hide").on('click',function(){
+                    $("img").slideDown();
+                })
+                $("#show").on('click',function(){
+                    $("img").toggle();
+                })
+            });
+    </script>
+</head>
+<body>
+    <h1>jquery Basic</h1>
+    <img src="../maxresdefault.jpg" alt="">
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+
+</body>
+</html>

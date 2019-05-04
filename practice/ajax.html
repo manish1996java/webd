@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="" id="inputbox">
+    <Button onclick="fetchdata()">serch</Button>
+    <div id="img">
+        <img src="https://giphy.com/gifs/site9gagcom-9AltGaetVhOhO" alt="">
+    </div>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+</body>
+
+<script>
+    window.addEventListener('load',init);
+    
+    var button;
+    var imagediv;
+    
+    function init(){
+        
+        imagediv = document.querySelector('#img');
+    }
+    
+    function printimage(data){
+        console.log('printimage',data.length);
+        for(var i=0;i<data.length;i++){
+            var img = document.createElement('img');
+            console.log(data[i].images.fixed_width.url);
+            img.src = data[i].images.fixed_width.url;
+            
+            imagediv.append(img); 
+        }
+    }
+
+    function fetchdata(){
+        var searchvalue = document.querySelector("#inputbox").value;
+        var promise = fetch('http://api.giphy.com/v1/gifs/search?q='+searchvalue+'&api_key=aZYtJNH1VsOkbxJSezTbloZD4btyXYKC&limit=5');
+        // var promise = fetch('https://raw.githubusercontent.com/manishdevlpr88/webdevelopment/master/product.json');
+        promise.then(res=>{
+            console.log('worked');
+            res.json().then(data=>{
+                console.log(data.data);
+                printimage(data.data);
+            }).catch(err=>{
+                console.log('get error');
+            })
+        })
+    }
+    
+
+</script>
+
+</html>
