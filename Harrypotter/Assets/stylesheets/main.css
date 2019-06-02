@@ -54,6 +54,7 @@
     #gallary .image img{
         height: 290px;
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -65,6 +66,31 @@
     }
     #gallary .image img{
         height: 269px;
+    }
+    #aside{
+        background-color: #333333;
+        color: white;
+        height: 700px;
+        width: 40px;
+        list-style: none;
+        position: absolute;
+        transition: 1s;
+        left: -10%;
+    }
+    #aside .container{
+        margin: 0 auto;
+        width: 70%;
+        overflow: scroll;
+    }
+    #aside li{
+        border-bottom: 0.2px solid white;
+        padding: 5px 0px;
+        text-align: center;
+        display: block;
+        transition: 2s;
+    }
+    #header .logo img{
+        padding-left: 38%;
     }
 }
 
@@ -328,6 +354,7 @@ h1,h2,h3,h4,h5,h6{
     .mobile-hidden{
         display: none;
     }
+    
 }
 
 
@@ -719,7 +746,7 @@ h1,h2,h3,h4,h5,h6{
     list-style: none;
     position: absolute;
     transition: 1s;
-    left: -90%;
+    left: -10%;
 }
 #aside .container{
     margin: 0 auto;
