@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link rel="icon" href="/Harrypotter/Assets/images/0.41_Ravenclaw_Crest_Transparent.png">
+    <link rel="stylesheet" href="/Harrypotter/Assets/stylesheets/all.min.css">
+    <link rel="stylesheet" href="/Harrypotter/Assets/stylesheets/main.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Pottermore - The digital heart of the Wizard Word</title>
+    <script>
+        window.addEventListener("load",function(){
+            console.log("load");
+            var flage = true;
+            var checkbox = document.querySelector("#hambergur");
+            checkbox.addEventListener("click",function(){
+                console.log("click");
+                if(flage){
+                    $("#aside").css({
+                    "left":"0%",
+                    })
+                    flage = false;    
+                }
+                else if(flage == false){
+                    $("#aside").css({
+                    "left":"-56%",
+                    })
+                    flage = true
+                }
+            });
+        })
+    </script>
+</head>
+    <body>
+         <div id="container">
+            <header id="header">
+                <div class="innercontainer">
+                <div class="container">
+                <div class="row justify-content-spacebetween">
+                    <div class="col mobile-menu mobile-hidden">
+                        <input type="checkbox" name="" id="hambergur" value="toggle-menu">
+                        <button  class="menu-btn">
+                             <span class="line"></span>
+                             <span class="line"></span>
+                             <span class="line"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <div class="logo">
+                            <a href="#">
+                                
+                                <img src="/Harrypotter/Assets/images/logo.png" alt="logo" >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                            <div class="top_option">
+                                <a href="" title="search"><i class="fas fa-search"></i></a>
+                                <a href="" title="profile"><i class="far fa-user mobile-hidden"></i></a>
+                                <a href="" title="bucket"><i class="fab fa-bitbucket mobile-hidden"></i></a>
+                            </div>
+                            <nav id="nav">
+                                <ul id="ul-list" class="row justify-content-spacebetween">
+                                    <li><a href="#">writing J.K Rowling</a></li>
+                                    <li><a href="#">Explore the Story</a></li>
+                                    <li><a href="#">Fantastic Beast</a></li>
+                                    <li><a href="#">Curse Child</a></li>
+                                    <li><a href="#">Featurs</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Book CluB</a></li>
+                                    <li><a href="#">Gallary</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <aside id="aside">
+                    <div class="container">
+                        <li><a href="#">writing J.K Rowling</a></li>
+                        <li><a href="#">Explore the Story</a></li>
+                        <li><a href="#">Fantastic Beast</a></li>
+                        <li><a href="#">Curse Child</a></li>
+                        <li><a href="#">Featurs</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Book CluB</a></li>
+                        <li><a href="#">Gallary</a></li>
+                        <li><a href="#">Shop</a></li>
+                    </div>
+                </aside>
+            </div>
+            </header>
+            <main id=main>
+                <div id="banner">
+                    <div class="banner_image">
+                            <div id="carousal">
+                                    <div class="slider">
+                                        <div class="image slide">
+                                            <img src="/Harrypotter/Assets/images/h6.jpg" alt="">
+                                            <div class="wrapper">
+                                                    <p>The Harry Potter  
+                                                            Rowling nearly killed and the ones
+                                                            she's sorry she did</p>
+                                            </div>  
+                                        </div>
+                                        <div class="image slide">
+                                            <img src="/Harrypotter/Assets/images/h7.jpeg" alt="">
+                                            <div class="wrapper">
+                                                    <p>The Harry Potter character J.K 
+                                                            Rowling nearly killed and the ones 
+                                                            she's sorry she did</p>
+                                            </div>
+                                        </div>
+                                        <div class="image slide">
+                                            <img src="/Harrypotter/Assets/images/h3.jpeg" alt="">
+                                            <div class="wrapper">
+                                                    <p>The Harry Potter character J.K 
+                                                            Rowling nearly killed and the ones 
+                                                            she's sorry she did</p>
+                                            </div>
+                                        </div>
+                                        <div class="image slide">
+                                            <img src="/Harrypotter/Assets/images/h4.jpeg" alt="">
+                                            <div class="wrapper">
+                                            
+                                                    <p>The Harry Potter character J.K 
+                                                            Rowling nearly killed and the ones 
+                                                            she's sorry she did</p>
+                                            </div>
+                                        </div>
+                                        <div class="image slide">
+                                            <img src="/Harrypotter/Assets/images/h5.jpg" alt="">
+                                            <div class="wrapper">
+                                                    <p>The Harry Potter character J.K
+                                                            Rowling nearly killed and the ones
+                                                            she's sorry she did</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                        <!-- <img src="/Harrypotter/Assets/images/ArthurWeasley_WB_F5_ArthurAndHarryInMinistryOfMagic_Still_080615_Land.jpg" alt="">
+                        <div class="wrapper">
+                                <p>The Harry Potter character J.K
+                                Rowling nearly killed and the ones
+                                she's sorry she did</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div Id="activities" class="row">
+                    <div class="col">
+                        <div class="image">
+                            <img src="/Harrypotter/Assets/images/harry-potter-wallpapers.jpg" alt="">
+                        </div>
+                        <div class="wrapper">
+                                <p>The House of MinaLima</p>
+                                <p>has a new Fantastic Beast:</p>
+                                <p>The Crimes of  Grindelwald</p>
+                                <p>exhibition</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="image">
+                            <img src="/Harrypotter/Assets/images/64792.jpg" alt="">
+                        </div>
+                        <div class="wrapper">
+                            <p>Why Newt Scamander is a</p>
+                            <p>different kind of hero</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="image">
+                            <img src="/Harrypotter/Assets/images/Harry-Potter-Wallpaper.jpg" alt="">
+                        </div>
+                        <div class="wrapper">
+                            <p>Fantastic Beasts: The</p>
+                            <p>Crimes of Grindelwald is</p>
+                            <p>out today</p>
+                        </div>
+                    </div>
+                </div> 
+                <section id="section_1">
+                        <h2>Go behind the scenes of Fantastic Beasts: The Crimes of Grindelwald with the new audio dcoumnetry</h2>
+                        <hr>
+                        <div class="image">
+                                <img src="/Harrypotter/Assets/images/FB-TRL3-89386.jpg" alt="">
+                            </div>
+                        <div class="wrapper">
+        
+                        </div>
+                </section>
+                <section id="section_2" class="row">
+                        <div class="col">
+                            <div class="image">
+                                <img src="/Harrypotter/Assets/images/DracoMalfoy_WB_F6_DracoMalfoyAttemptingToAttackDumbledore_Still_080615_Land.jpg" alt="">
+                            </div>
+                            <div class="wrapper">
+                                    <p>The House of MinaLima</p>
+                                    <p>has a new Fantastic Beast:</p>
+                                    <p>The Crimes of  Grindelwald</p>
+                                    <p>exhibition</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="image">
+                                <img src="/Harrypotter/Assets/images/WB_F1__HarryPotterRonWeasley_HarryAndRonInClasWithQuills_3143.jpg" alt="">
+                            </div>
+                            <div class="wrapper">
+                                <p>Why Newt Scamander is a</p>
+                                <p>different kind of hero</p>
+                            </div>
+                        </div>
+                </section>
+                <section id="section_3">
+                    <div class="container">
+                        <h2>Go behind the scenes of Fantastic Beasts: The Crimes of Grindelwald with the new audio dcoumnetry</h2>
+                        <hr>
+                        <div class="image">
+                            <img src="/Harrypotter/Assets/images/Hompage_Module_2560x1440_V3.jpg" alt="">
+                            <div class="sadow1"></div>
+                            <div class="sadow2"></div>
+                        </div>
+                    </div>
+                </section>
+                                       
+            </main>
+            <footer id="footer">
+                <h2>
+                    <span class="span">
+                        <span>Find us On</span>
+                    </span>
+                </h2>
+                <div class="social_icon">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-instagram"></i>
+                        <span></span>
+                </div>
+                <div class="social_link">
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Press</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">term & conditions</a></li>
+                        <li><a href="">privacy & cookies policy</a></li>
+                    </ul>
+
+                </div>
+                <div class="logo">
+                    <div class="image">
+                        <img src="../Harrypotter/Assets/images/Ww-logo-tablet.png" alt="">
+                    </div>
+                </div>
+                <div class="footer_description">
+                    <p>Materials from the Harry Potter series of films and from the film Fantastic Beasts And Where To Find Them are courtesy of Warner Bros. </p>
+                     <p>Wizarding World Publishing and Theatrical Rights © J.K. Rowling. Pottermore.com and Artwork © Pottermore Limited. </p>
+                      <p> Wizarding World is a trademark of Warner Bros. Entertainment Inc.</p>
+                      <p> Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.</p>
+                </div>
+            </footer>
+            
+            <div id="cube">
+                    <div id="top">
+                        <img src="/Harrypotter/Assets/images/cube.jpg" alt="">
+                    </div>
+                    <div id="front">
+                        <img src="/Harrypotter/Assets/images/cube.jpg" alt="">
+                    </div>
+                    <div id="left">
+                        <img src="/Harrypotter/Assets/images/cube.jpg" alt="">
+                    </div>
+                    <div id="bottom">
+                        <img src="/Harrypotter/Assets/images/cube.jpg" alt="">
+                    </div>
+                    <div id="back">
+                        <img src="/Harrypotter/Assets/images/cube.jpg" alt="">
+                    </div>
+                    <div id="right">
+                        <img src="/Harrypotter/Assets/images/cube.jpg" alt="">
+                    </div>
+            </div>
+         </div>
+         <script src="/Harrypotter/Assets/js/main.js"></script>
+    </body>
+</html>
+  <!-- <p>WWF's goal is ro:
+                    <q>Build  a future where people live in  harmony with nature.</q>
+                    We hope they suceed.
+                </p>
+                <p><s>My car is blue.</s></p>
+                <p>My new car is silver.</p>
+                <p>My favorite color is <del>blue</del> <ins>red</ins>!</p> -->
+
+
+                <!-- <article>
+                        <section>
+            
+                        </section>
+                    </article>
+                    <article>
+                        <section>
+            
+                        </section>
+                    </article>
+                    <article>
+                        <section>
+                            <figure>
+                                <img src="" alt="">
+                                <figcaption></figcaption>
+                            </figure>
+                        </section>
+                    </article> -->
+    
