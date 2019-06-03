@@ -1,0 +1,321 @@
+*{
+    
+}
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0px;
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+.dropdown2::after{
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border: 3px solid black;
+    border-color: black transparent transparent;
+    top: 16px;
+    right: 22px;
+    /* background-color: black; */
+    
+
+}
+.dropdown::after{
+    content: "";
+    display: inline-block;
+    border: 5px solid rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255) transparent transparent;
+    /* background-color: black; */
+    
+
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+#container{   
+    margin: 0 auto;
+}
+#header{
+    margin-bottom: 29px;
+}
+#topheader{
+    width: 95%;
+    margin: 0 auto;
+    
+}
+#topheader a{
+    color: black
+}
+#topheader .logo{
+    border-right: 1px solid black;
+    padding: 8px 0px 5px 0px;
+    width: 8%;    
+}
+#topheader .logo img{
+    width: 77px;
+    height: 26px;
+}
+#topheader .nav{
+    width: 74%;    
+}
+#topheader .nav ul li{
+    font-size: 15px;
+    font-weight: 600;
+    display: inline;
+}
+#topheader .nav ul li i{
+    font-size: 18px;
+    padding-right: 10px;
+    padding-left: 15px;
+}
+#topheader .nav ul li:nth-child(1) a,#topheader .nav ul li:nth-child(10) a{
+    padding: 11px 46px 11px 5px;
+}
+#topheader .nav ul li:nth-child(10) a{
+    padding-right: 110px;
+}
+
+#topheader .nav ul li a{
+    border-right: 1px solid;
+    display: inline-block;
+    padding: 11px 16px;
+    position: relative;
+}
+#topheader .search{
+    padding: 8px 0px;
+    width: 16%;    
+}
+#topheader .search input{
+    border: none;
+    background-color: #E4E4E4;
+    padding-left: 8px;
+    font-weight: 600; 
+    width: 155px;
+    height: 21px;
+    font-size: 15px;
+}
+#topheader .search button{
+    border: none;
+    background-color: #E4E4E4;
+    width: 30px;
+    height: 23px;
+    font-size: 15px;
+}
+@media (max-width: 1024px ){
+    #topheader .nav{
+        width: 69%;    
+    }
+    #topheader .nav ul li i{
+        font-size: 10px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    #topheader .nav ul li{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    #topheader .nav ul li a{
+        display: inline-block;
+        padding: 8px 10px;
+        position: relative;
+    }
+    #topheader .search{
+        padding: 8px 0px;
+        width: 21%;    
+    }
+    #topheader .nav ul li:nth-child(1) a, #topheader .nav ul li:nth-child(10) a {
+        padding: 10px 27px 18px 5px;
+    }
+    #topheader .logo img {
+        width: 60px;
+        height: 21px;
+    }
+    #topheader .search input{
+        padding-left: 8px;
+        font-weight: 600; 
+        width: 73px;
+        height: 21px;
+        font-size: 15px;
+    }
+    #topheader .search button{
+        width: 30px;
+        height: 23px;
+        font-size: 15px;
+    }
+    
+}
+#bottomheader{
+    background-color: #BB1919;
+}
+#bottomheader .container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#bottomheader,#bottomheader a{
+    color: aliceblue;
+}
+#bottomheader .news{
+    font-size: 26px;
+}
+#bottomheader .news h2{
+    padding: 6px 0px;
+    margin-bottom: 0px;
+}
+#bottomheader .navbar{
+    background-color: #BB1919;
+}
+#bottomheader .navbar ul li{
+    border-left: 1px solid gray;
+    display: inline;
+}
+#bottomheader .navbar ul li:nth-child(1){
+    border-left: 1px solid rgba(128, 128, 128, 0); 
+}
+#bottomheader .navbar ul li a{
+    
+    display: inline-block;
+    padding: 8px 7px;
+    font-size: 15px;
+}
+#bottomheader .navbar ul li a:hover,#bottomheader .navbar ul li:nth-child(1) a{
+    border-bottom: 5px solid white;
+}
+#bottomheader .navbar ul li:last-child a:hover{
+    background-color: black;
+    border-bottom: 5px solid black;
+}
+#main{
+    width: 90%;
+    margin: 0 auto;
+}
+#main section img{
+    width: 100%;
+}
+#main #section1 .col1{
+    width: 18%;
+}
+#main #section1 .col2{
+    width: 38%;
+}
+#main #section1 .col3{
+    width: 18%;
+}
+#main #section1 .col4{
+    width: 18%;
+}
+#section1 article{
+    padding-top: 30px;
+}
+#section1 .col1 h2 a{
+    line-height: 0.5;
+    font-size: 30px;
+}
+#main #section2 .sec1,#section4 .sec1{
+    width: 60%;
+}
+#main #section2 .sec1 .insec1,#main #section2 .sec1 .insec2,#main #section2 .sec1 .insec3,#main #section4 .sec1 .insec1,#main #section4 .sec1 .insec2,#main #section4 .sec1 .insec3{
+    width: 30%;
+}
+#main #section2 .sec2,#main #section4 .sec2{
+    width: 35%;
+}
+#main #section2 .sec2 .insec1,#main #section2 .sec2 .insec2,#main #section4 .sec2 .insec1,#main #section4 .sec2 .insec2{
+    width: 50%;
+}
+#main #section3 .sec1 .insec1,#main #section3 .sec1 .insec2,#main #section3 .sec1 .insec3,#main #section3 .sec1 .insec4,#main #section3 .sec1 .insec5{
+    width: 19%;
+}
+
+#section3,#section4{
+    position: relative;
+}
+#section3 .heading,#section4 .heading{
+    background-color: white;
+    padding: 5px;
+    position: absolute;
+    top: -17px;
+}
+#section3 h2,#section4 h2{
+    margin: 0px;
+}
+#section3 .container,#section4 .container{
+    padding: 40px 0px;
+}
+#section3 .image{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+#footer{
+    background-color: #4C4C4C;
+    color: white;
+    
+}
+#footer .footer1 h1{
+    font-size: 22px;
+    padding: 20px 0px;
+}
+#footer .footer2 ul li{
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+#footer .footer2 ul li a{
+    display: inline;
+    width: 168px;
+    height: 33px;
+}
+#footer a{
+    color: white;
+}
+#footer .container{
+    width: 90%;
+    margin: 0 auto;
+}
+#footer .footer2{
+    padding-bottom: 23px;
+    border-bottom: 1px solid white;
+}
+#footer .footer2 .subfooter1,#footer .footer2 .subfooter2,#footer .footer2 .subfooter3,#footer .footer2 .subfooter4,#footer .footer2 .subfooter5,#footer .footer2 .subfooter6{
+    width: 15%;
+    border-right: 1px solid rgb(255, 255, 255);
+    padding: 0px 0px 0px 10px;
+ 
+}
+#footer ul li:hover a,#footer .footer2 ul li:hover a{
+    border-bottom: 1px solid white;
+}
+#footer .footer2 section:last-child{
+    border-right: 1px solid transparent;
+}
+#footer .footer3{
+    font-size: 13px;
+}
+#footer .footer3 .subfooter1{
+    padding: 12px 0px;
+}
+#footer .footer3 .subfooter1 ul li{
+    display: inline;
+} 
+#footer .footer3 .subfooter1 ul li a{
+    padding: 2px 5px;
+} 
