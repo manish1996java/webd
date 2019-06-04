@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .carousal{
+            position: relative;
+            width: 100%;
+            /* margin: 0 auto; */
+            overflow: hidden;
+            border: 2px solid black;
+            
+        }
+        .slider{
+            background-color: aquamarine;
+            border:3px solid red;
+            width: 150%;
+            transition-duration: 1s;
+            /* border-image: linear-gradient(to right ,red, yellow,blue,green);
+            border-image-slice: 1; */
+            
+        
+        }
+        .slider img{
+            margin: 2px;
+            width: 18.75%;
+            height: 200px;
+        }
+        @media (max-width:1200px){
+            .slider img{
+            height: 200px;
+        }
+        }
+        @media (max-width:996px){
+            .slider img{
+            height: 167px;
+        }
+        }
+        @media (max-width:768px){
+            .slider img{
+            height: 142px;
+        }
+        }
+        @media (max-width:450px){
+            .slider img{
+            height: 111px;
+        }
+        }
+        button{
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 5px 5px 8px grey;
+            background-color: white;
+            position: absolute;
+            top:35%;
+            cursor: pointer;
+        }
+        .next{
+            margin-left: 94%;
+        }
+        .prev{
+            margin-left: 2%;
+        }
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        var position=0;
+        $(document).ready(()=>{
+            $(".next").on('click',next);
+            $(".prev").on('click',prev);
+
+            function next(){
+                var val = -30;
+                console.log(val);
+                if(position > val){
+                    console.log(position);
+                    console.log("true");
+                    position-=5;
+                    $(".slider").css({
+                        "transform":`translateX(${position}%)`,
+                    })
+                }
+            }
+            function prev(){
+                if(position < 0){
+                    console.log(position);
+                    console.log("true");
+                    position+=5;
+                    $(".slider").css({
+                        "transform":`translateX(${position}%)`,
+                    })
+                }
+            }
+        })
+    
+    </script>
+</head>
+<body>
+    <div class="carousal">
+        <div class="slider" style="display: flex; ">
+            <img src="./images/computer.jpg" alt="">
+            <img src="./images/computer.jpg" alt="">
+            <img src="./images/computer.jpg" alt="">
+            <img src="./images/computer.jpg" alt="">
+            <img src="./images/computer.jpg" alt="">
+            <img src="./images/computer.jpg" alt="">
+            <img src="./images/computer.jpg" alt="">
+            <img src="./images/computer.jpg" alt="">
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        
+        .logo-img{
+            width: 107px;
+            height: 38px;     
+        }
+        .theme-color{
+            background-color: #24303F;
+        }
+        .btn-gry{
+            background-color: #E1E1E1;
+        }
+        .theme-color-yellow{
+            background-color: #F3A847;
+        }
+        .input-box-size{
+            width: 40%;
+        }
+        .text-gray{
+            color: #c7c7c8;
+        }
+        .navbar{
+            align-items: flex-end;      
+        }
+        .mycontainer{
+            width: 96%;
+            margin: 0 auto;
+        }
+        /* .carousel-control-next-icon {
+            background-image: url(./Assets/images/right-arrow.svg);
+        }
+        .carousel-control-prev-icon {
+            background-image: url(./Assets/images/back.svg);
+        }  */
+        @media (max-width:1180px){
+            .navbar{
+                width: 1180px;
+            }
+        }
+        .nav{
+            align-items: flex-end;
+        }
+        .minsize{
+            font-size: 13px;
+        }
+        .minsize2{
+            font-size: 14px;
+        }
+        nav ul li{
+            line-height: 1.2;
+            display: inline;
+        }
+        nav ul li span{  
+            display: block;
+        }
+        #nav-2 li i{
+            transition: 1s;
+        }
+        #nav-2 li:hover i{ 
+            transform: scale(1.1,1.1)
+        }
+
+        .carousal{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+          
+            
+        }
+        .slider{
+            
+            width: 150%;
+            transition-duration: 1s;
+            
+            
+        
+        }
+        .slider img{
+            margin: 8px;
+            width: 12.10%;
+            height: 200px;
+        }
+        @media (max-width:1200px){
+            .slider img{
+            height: 200px;
+        }
+        }
+        @media (max-width:996px){
+            .slider img{
+            height: 167px;
+        }
+        }
+        @media (max-width:768px){
+            .slider img{
+            height: 142px;
+        }
+        }
+        @media (max-width:450px){
+            .slider img{
+            height: 111px;
+        }
+         }
+        .carousal button{
+            font-size: 30px;
+            font-weight: 300;
+            width: 40px;
+            height: 80px;
+            border: none;
+            box-shadow: 5px 5px 8px grey;
+            background-color: white;
+            position: absolute;
+            top:35%;
+            cursor: pointer;
+        }
+        .next{
+            border-radius: 3px 0px 0px 3px;
+            margin-left: 95%;
+        }
+        .prev{
+            border-radius: 0px 3px 3px 0px;
+            margin-left: 0%;
+        } 
+        #footer .footer-middle li,#footer .footer-bottom li{
+            list-style: none;
+        }
+
+        #footer .footer-bottom ul li{
+            line-height: 1;
+        }
+        .sml-font{
+            color:#565656;
+            font-size: 12px;
+        }
+        .country-name{
+            font-size: 12px;
+            color: #c7c7c8;
+        }
+        .ft-to-li-heading{
+            font-weight: 600;
+            font-size: 17px;
+            color: #c7c7c8;
+        }
+        .ft-to-li-font{
+            font-size: 13px;
+            color: #c7c7c8;
+        }
+        .ft-bt-heading{
+            font-size: 16px;
+            color: #c7c7c8;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/48b54dec6f.js"></script>
+    <script src="./Assets/js/main.js"></script>
+    <script>
+        
+            $(document).ready(()=>{
+                $(".next").on('click',next);
+                $(".prev").on('click',prev);
+                
+            })
+                var position =0;
+
+                function next(){
+                    let val = -30;
+                    console.log(position)
+                    if(position > val){
+                        console.log(position);
+                        console.log("true");
+                        position-=5;
+                        $(this).siblings(".slider").css({
+                            "transform":`translateX(${position}%)`,
+                        })
+                    }
+                };
+                function prev(){
+                    if(position < 0){
+                        console.log("true");
+                        position+=5;
+                        $(this).siblings(".slider").css({
+                            "transform":`translateX(${position}%)`,
+                        })
+                    }
+                };
+
+
+        
+        </script>
+</head>
+<body style="background-color: #eaeded;">
+    <div id="Outercontainer" style="position:relative">
+    <nav id="nav-1" class="navbar theme-color">
+        <a class="nav-brand col-1" a href="#"><img src="./Assets/images/white-amazon-logo-png-6.png" class="logo-img" alt=""></a>    
+        <form class="form-group col-7 m-0 ml-5" action="">
+            <div class="input-group">
+                <div class="dropdown">
+                    <button class="btn btn-gry dropdown-toggle" data-toggle="dropdown" style="border-radius: 3px 0px 0px 3px;  font-size: 12px; padding: 9px;" id="dropdownbutton">
+                        All
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownbutton">
+                        <a class="dropdown-item" href="#">All Catagories</a>
+                        <a class="dropdown-item" href="#">Amazone Devices</a>
+                        <a class="dropdown-item" href="#">Apps & game</a>
+                    </div>
+                </div>
+                <input type="text" class="form-control input-lg" style="border-radius: 0px 0px 0px 0px">
+                <button class="btn theme-color-yellow" style="border-radius: 0px 3px 3px 0px;"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <div class="image col-3">
+                <img src="./Assets/images/Amazon_GW_DesktopSWM_Template_400x39._CB483305864_.jpg" class="img-fluid " alt="">
+        </div>
+    </nav>
+    <nav id="nav-2" class="navbar theme-color flex-nowrap sticky-top" style="z-index:999;">
+        <ul class="nav">
+            <li style="position:relative;" class="pl-3"><a href="" class="nav-link"><i class="fas fa-map-marker-alt text-white" style="position:absolute; top:6px; left:0px; font-size: 30px;"></i><span class="minsize text-white">Deliver to Delhi</span><span class="minsize2 text-white">Delhi 110085</span></a></li>
+        </ul>
+        <ul class="nav flex-nowrap">
+            <li><a href="" class="nav-link"><span class="minsize text-white">shop by</span><span class="minsize2 text-white">Category</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize2 text-gray">Buy again</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize2 text-gray"> You Amazon.in</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize2 text-gray">Today's Deals</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize2 text-gray">Amazon Pay</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize2 text-gray">Sell</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize2 text-gray">Sell</span></a></li>
+        </ul>
+        <ul class="nav flex-nowrap">
+            <li><a href="" class="nav-link"><span class="minsize text-gray">Hello,Sign in</span><span class="minsize2 text-white">Your Orders</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize text-gray">shop by</span><span class="minsize2 text-white">Prime</span></a></li>
+            <li><a href="" class="nav-link"><span class="minsize text-gray">shop by</span><span class="minsize2 text-white">Lists</span></a></li>
+            <li style="position:relative;" class="pl-3"><a href="" class="nav-link"><i class="fas fa-shopping-cart text-white" style="position:absolute; top:-5px; left:-3px; font-size: 30px;"></i><span class="minsize text-white"></i><span class="minsize2 text-white">Cart</span></a></li>
+        </ul>        
+    </nav>
+    <div id="carousal-container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./Assets/images/caro1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Assets/images/caro3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Assets/images/caro4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Assets/images/caro5.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Assets/images/caro6.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+            </div>
+    </div>
+    <div id="maincontainer" style="position:absolute; top: 80%;">
+    <div class="container-fluid mb-3">
+        <div class="row justify-content-around">
+            <div class="card col-lg ml-3 mr-3 mb-2" style="width: 18rem;">
+                <img src="./Assets/images/computer.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card col-lg mr-3 mb-2" style="width: 18rem;">
+                    <img src="./Assets/images/computer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card col-lg mr-3 mb-2" style="width: 18rem;">
+                    <img src="./Assets/images/computer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div> 
+            <div class="col-lg mr-3 mb-3">
+                    <div class="card p-4" style="width: 18rem;">
+                        
+                        <h3 class="card-title">Sign in for your best expirencw</h3>
+                        <a class="btn btn-info w-75"> sign in securly</a>
+                        
+                    </div>
+                    <div class="image">
+                        <img src="./Assets/images/Laptops._CB454409461_.jpg" class="img-fluid" alt="">
+                    </div>
+            </div>           
+        </div>
+    </div>
+    <section id="section-1" class="container-fluid mb-3 ">
+            <div class="carousal p-3 bg-white">
+                    <h3 style="display:inline-block;">Today's Deals</h3> <a href=""> see all deals</a>
+                    <div class="slider row flex-nowrap">
+                        <img src="./Assets/images/computer.jpg" alt="">
+                        <img src="./Assets/images/41KSBZqGcWL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/41mchYVIbEL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/61lrK42KE2L._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/61upU2GNqhL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71Q7VeAsGRL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/419BAqAp+TL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/4126OXYhxrL.__AC_SY200_.jpg" alt="">
+                    </div>
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
+            </div>
+    </section>
+    <section id="section-2" class="container-fluid mb-2 ">
+            <div class="carousal p-3 bg-white">
+                    <h3 style="display:inline-block;">Today's Deals</h3> <a href=""> see all deals</a>
+                    <div class="slider row flex-nowrap">
+                        <img src="./Assets/images/71dDOCgOlIL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71j79P9f3tL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71Q7VeAsGRL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/81y22ndVtKL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/51CVAV6ZGkL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/81yDAshbPDL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/computer.jpg" alt="">
+                        <img src="./Assets/images/computer.jpg" alt="">
+                    </div>
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
+            </div>
+    </section>
+    <section id="seciont-3 mb-3">
+        <div class="row p-4 bg-white">
+            <div class="col-md-6" style="border-right: 0.5px solid gray ;">
+                <img class="img-fluid" src="./Assets/images/pcacc_billboard._UX440_SX440_CB462801016_.jpg" alt="">
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src="./Assets/images/hotspots_Billboard._UX440_SX440_CB462800926_.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="section-4" class="container-fluid mb-3 mt-3">
+            <div class="carousal p-3 bg-white">
+                    <h3 style="display:inline-block;">Today's Deals</h3> <a href=""> see all deals</a>
+                    <div class="slider row flex-nowrap">
+                        <img src="./Assets/images/71lIIGW4G3L._AC_SY200_ (1).jpg" alt="">
+                        <img src="./Assets/images/71lIIGW4G3L._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/61b223-yyML._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/61lR93HHNiL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71i-1uYY3IL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71UtKTJvMQL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/4126OXYhxrL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/715N0oTr1RL._AC_SY200_.jpg" alt="">
+                    </div>
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
+            </div>
+    </section>
+    <section id="section-5" class="container-fluid mb-3 ">
+            <div class="carousal p-3 bg-white">
+                    <h3 style="display:inline-block;">Today's Deals</h3> <a href=""> see all deals</a>
+                    <div class="slider row flex-nowrap">
+                        <img src="./Assets/images/61upU2GNqhL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71Q7VeAsGRL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/419BAqAp+TL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/4126OXYhxrL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71i-1uYY3IL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71UtKTJvMQL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/4126OXYhxrL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/715N0oTr1RL._AC_SY200_.jpg" alt="">
+                    </div>
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
+            </div>
+    </section>
+    <section id="section-1" class="container-fluid mb-3 ">
+            <div class="carousal p-3 bg-white">
+                    <h3 style="display:inline-block;">Today's Deals</h3> <a href=""> see all deals</a>
+                    <div class="slider row flex-nowrap">
+                        <img src="./Assets/images/71lIIGW4G3L._AC_SY200_ (1).jpg" alt="">
+                        <img src="./Assets/images/71lIIGW4G3L._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/61b223-yyML._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/61lR93HHNiL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/419BAqAp+TL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/4126OXYhxrL.__AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71i-1uYY3IL._AC_SY200_.jpg" alt="">
+                        <img src="./Assets/images/71UtKTJvMQL._AC_SY200_.jpg" alt="">
+                    </div>
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
+            </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-top w-100 pt-3 pb-1" style="background-color: #485769;">
+            <p class="text-center text-white" style="font-size: 14px;">Back to top </p> 
+        </div>
+        <div class="footer-middle theme-color" style="border-bottom: 0.2px solid rgb(103, 102, 102);">
+            <div class="containerm" style="width:70%; margin: 0 auto;">
+                <div class="row justify-content-around py-5">
+                    <ul class="">
+                        <li><a class="text-light ft-to-li-heading" href="" >Get to Know Us</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">About Us</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Careers</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Press Releases</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Amazon Cares</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Gift a Smile</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="text-light ft-to-li-heading" href="" >Connect with Us</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Facebook</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Twitter</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Instagram</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="text-light ft-to-li-heading" href="" >Make Money with Us</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Sell on Amazon</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Become an Affiliate</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Fulfilment by Amazon</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Advertixe Your Products</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Amazon Pay on Merchants</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="text-light ft-to-li-heading" href="" >Let Us Help You</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Your Account</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Returns Center</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">100% Purchases Protection</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Amazon App Download</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Amazon Assistent Download</a></li>
+                        <li><a class="text-light ft-to-li-font" href="">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle2 theme-color ">
+            <div class="image py-3" style="width:10%; margin: 0 auto;">
+                <img class="logo-img" src="./Assets/images/white-amazon-logo-png-6.png" alt="">
+            </div>
+            <div class="py-3" style=" width: 85%; margin:0 auto;">
+                <ul class="nav justify-content-around">
+                    <li><a href="" class="nav-link country-name">Australia </a></li>
+                    <li><a href="" class="nav-link country-name">Brazil</a></li>
+                    <li><a href="" class="nav-link country-name">Canada</a></li>
+                    <li><a href="" class="nav-link country-name">China</a></li>
+                    <li><a href="" class="nav-link country-name">France</a></li>
+                    <li><a href="" class="nav-link country-name">Germany</a></li>
+                    <li><a href="" class="nav-link country-name">Italy</a></li>
+                    <li><a href="" class="nav-link country-name">Japan</a></li>
+                    <li><a href="" class="nav-link country-name">Mexico</a></li>
+                    <li><a href="" class="nav-link country-name">Netherlands</a></li>
+                    <li><a href="" class="nav-link country-name">Spain</a></li>
+                    <li><a href="" class="nav-link country-name">United Arab Emirates</a></li>
+                    <li><a href="" class="nav-link country-name">United Kingdom</a></li>
+                    <li><a href="" class="nav-link country-name">United states</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom pt-5 pb-2" style="background-color: #131A22;">
+                <div class="containerm" style="width:70%; margin: 0 auto;">
+                <div class="row justify-content-around">
+                    <ul>
+                        <li><a class="ft-bt-heading" href="" >AbeBooks</a></li>
+                        <li><a class=" sml-font" href="">Books,art</a></li>
+                        <li><a class=" sml-font" href="">& collectibles</a></li>
+                    </ul>
+                    <ul>
+                            <li><a class="ft-bt-heading" href="" >Amazon web Services</a></li>
+                        <li><a class=" sml-font" href="">scalable Cloud</a></li>
+                        <li><a class=" sml-font" href="">Computing Services</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="ft-bt-heading " href="" >Audible</a></li>
+                        <li><a class=" sml-font" href="">Download</a></li>
+                        <li><a class=" sml-font" href="">Audio Books</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="ft-bt-heading" href="" >DPReview</a></li>
+                        <li><a class=" sml-font" href="">Digital</a></li>
+                        <li><a class=" sml-font" href="">Photography</a></li>
+                    </ul>
+                    <ul class="">
+                        <li><a class="ft-bt-heading" href="" >IMDb</a></li>
+                        <li><a class=" sml-font" href="" >Movies, TV</a></li>
+                        <li><a class=" sml-font" href="">& Celebrities</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="ft-bt-heading" href="" >Junglee.com</a></li>
+                        <li><a class=" sml-font" href="">Shop Online</a></li>
+                        <li><a class=" sml-font" href="">in India</a></li>
+                    </ul>
+                </div>
+            </div><div class="containerm" style="width:70%; margin: 0 auto;">
+                    <div class="row justify-content-around">
+                        <ul>
+                            <li><a class="ft-bt-heading" href="" >AbeBooks</a></li>
+                            <li><a class=" sml-font" href="">Books,art</a></li>
+                            <li><a class=" sml-font" href="">& collectibles</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="ft-bt-heading" href="" >Amazon web Services</a></li>
+                            <li><a class=" sml-font" href="">scalable Cloud</a></li>
+                            <li><a class=" sml-font" href="">Computing Services</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="ft-bt-heading sml-font" href="" >Audible</a></li>
+                            <li><a class=" sml-font" href="">Download</a></li>
+                            <li><a class=" sml-font" href="">Audio Books</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="ft-bt-heading" href="" >DPReview</a></li>
+                            <li><a class=" sml-font" href="">Digital</a></li>
+                            <li><a class=" sml-font" href="">Photography</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a class="ft-bt-heading" href="" >IMDb</a></li>
+                            <li><a class=" sml-font" href="" >Movies, TV</a></li>
+                            <li><a class=" sml-font" href="">& Celebrities</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="ft-bt-heading" href="" >Junglee.com</a></li>
+                            <li><a class=" sml-font" href="">Shop Online</a></li>
+                            <li><a class=" sml-font" href="">in India</a></li>
+                        </ul>
+                    </div>
+                </div>
+            <div class="py-3" style=" width: 53%; margin:0 auto;">
+                    <ul class="nav">
+                        <li><a href="" class="nav-link text-light" style="font-size:14px">Condition of Use & sale</a></li>
+                        <li><a href="" class="nav-link text-light" style="font-size:14px">Privacy Notice</a></li>
+                        <li><a href="" class="nav-link text-light" style="font-size:14px">Interest-Base Ads</a></li>
+                        <p class="m-0 sml-font">&copy; 1996-2019, Amazon.com, Inc. or its affiliates</p>
+                    </ul>
+                </div>
+        </div>
+    </footer>
+    </div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
