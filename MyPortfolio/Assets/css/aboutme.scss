@@ -1,0 +1,76 @@
+#aboutmecontent{
+    overflow: scroll;
+    font-size: 20px;
+    padding: 20px;
+
+    .aboutme{
+        width: 80%;
+        margin: 0 auto;
+        .image{
+            width: 20%;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                min-width: 100px;
+            }
+        }
+        .hero-detail{
+            text-align: center;
+        }
+        h3{
+            text-align: center; 
+            font-weight: 600;
+            font-size: 25px;
+                
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 20%;
+                border-bottom: 4px solid black;
+            }
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 20%;
+                border-bottom: 4px solid black;
+            }
+        }
+        
+    }
+
+    // .aboutme{
+    //     h3{
+    //         text-align: center; 
+    //         font-weight: 600;
+    //         font-size: 25px;
+              
+    //         &::after{
+    //             content: "";
+    //             display: inline-block;
+    //             width: 20%;
+    //             border-bottom: 4px solid black;
+    //         }
+    //         &::before{
+    //             content: "";
+    //             display: inline-block;
+    //             width: 20%;
+    //             border-bottom: 4px solid black;
+    //         }
+    //     }
+    //     p{
+
+    //     }
+        
+    // }
+    // .pararow{
+    //     display: flex;
+    // }
+}
+.heightcolor{
+    color: green;
+}
+.boldheighlight{
+    margin: 0px 0px;
+    font-size: 40px;
+
+}

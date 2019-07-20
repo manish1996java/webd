@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="./Assets/css/chart.css">
+    <link rel="stylesheet" href="./Assets/css/skill.css">
+    <title>Document</title>
+    <script>
+        
+        window.addEventListener('load', bindEvent)
+        function bindEvent() {
+            var loadingoverlay = document.getElementById("loading-div");
+            loadingoverlay.style.display = "none";
+            var img = document.getElementById("profile-img");
+            console.log(loadingoverlay);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="loader-div" id="loading-div">
+        <div id="loaders-container">
+            <div>
+                <div class="loader-1"></div>
+                <p>
+                    loading...
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <p>MKdev</p>
+            </div>
+            <nav class="sidebar">
+                <ul>
+                        <li><a href="./index.html" class="active">Home</a></li>
+                        <li><a href="./aboutme.html">AboutMe</a></li>
+                        <li><a href="#">Skill</a></li>
+                        <li><a href="./qualification.html">Resume</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li id="mydimg" class="mydevimg"><img src="./Assets/image/mydev.svg" alt=""> </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content" div="mycontent">
+                <h3>  Skill  </h3>
+            <div class="container">
+                <div class="innercontainer">
+                    <div class="box">
+                            <div class="chart" data-percent="70">70%</div>
+                            <p>HTML</p>
+                    </div>
+                     
+                    <div class="box">
+                            <div class="chart" data-percent="80">80%</div>
+                            <p>CSS</p>
+                    </div>
+                    
+                    <div class="box">
+                            <div class="chart" data-percent="65">65%</div>
+                            <p>JS</p>
+                    </div>
+                     
+                    <div class="box">
+                            <div class="chart" data-percent="60">60%</div>
+                            <p>JQUERY</p>
+                    </div>
+                    
+                    <div class="box">
+                            <div class="chart" data-percent="55">55%</div>
+                            <p>BOOTSTRAP</p>
+                    </div>
+                    
+                    <div class="box">
+                            <div class="chart" data-percent="60">60%</div>
+                            <p>ANGULAR</p>
+                    </div>         
+                </div>
+            </div>
+            <!-- <div class="templatelinks">
+                <ul>
+                    <li><a href="">Amazon Replica</a></li>
+                    <li><a href="">BBC New Replica</a></li>
+                    <li><a href="">PotterMore website Replica</a></li>
+                </ul>
+            </div> -->
+        </div>
+        <footer class="footer">
+            <ul>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/cea2fedb0a.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script src="./Assets/js/jquery.easypiechart.js"></script>
+    <script>
+            $(function() {
+                $('.chart').easyPieChart({
+                    //your options goes here
+                });
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.content{
+    @media screen and (max-width: 772px){
+    overflow: scroll;
+    }
+    h3{
+        margin-top:30px;
+        text-align: center; 
+        font-weight: 600;
+        font-size: 25px;
+          
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 20%;
+            border-bottom: 4px solid black;
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 20%;
+            border-bottom: 4px solid black;
+        }
+    }
+    .contactcontain{
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px 0px;
+        background-color: rgba(207, 129, 40, 0.228);
+        .innerwrapper{
+            width: 90%;
+            margin: 0 auto;
+            .first-row{
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                .info-box{
+                    box-sizing: border-box;
+                    word-wrap: break-word;
+                    width: 25%;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+            .second-row{
+                text-align: center;
+                justify-content: space-between;
+            }
+            .third-row{
+                text-align: center;
+                justify-content: space-between;
+                form{
+                    .text-group{
+                        margin-bottom: 10px;
+                        input{
+                            height: 40px;
+                            width: 40%;
+                            &[placeholder="Email"],&[placeholder="Name"]{
+                                font-size: 15px;
+                            } 
+                        }
+                    }
+                    textarea{
+                        width: 80%;
+                        &[placeholder="Message"]{
+                            font-size: 15px;
+                        } 
+                    }
+                    button{
+                        width: 200px;
+                        height: 40px;
+                        font-size: 15px;
+                        margin: 0 auto;
+                        display: block;
+                        background-color: rgba(255, 0, 0, 0);
+                        border: 0.1px solid black;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

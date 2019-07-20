@@ -1,0 +1,106 @@
+@media screen and (max-width: 772px) {
+  .content {
+    overflow: scroll;
+  }
+}
+
+.content h3 {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.content h3::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  border-bottom: 4px solid black;
+}
+
+.content h3::before {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  border-bottom: 4px solid black;
+}
+
+.content .contactcontain {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px 0px;
+  background-color: rgba(207, 129, 40, 0.228);
+}
+
+.content .contactcontain .innerwrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content .contactcontain .innerwrapper .first-row {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .contactcontain .innerwrapper .first-row .info-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  width: 25%;
+}
+
+.content .contactcontain .innerwrapper .first-row .info-box i {
+  font-size: 20px;
+}
+
+.content .contactcontain .innerwrapper .second-row {
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .contactcontain .innerwrapper .third-row {
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .contactcontain .innerwrapper .third-row form .text-group {
+  margin-bottom: 10px;
+}
+
+.content .contactcontain .innerwrapper .third-row form .text-group input {
+  height: 40px;
+  width: 40%;
+}
+
+.content .contactcontain .innerwrapper .third-row form .text-group input[placeholder="Email"], .content .contactcontain .innerwrapper .third-row form .text-group input[placeholder="Name"] {
+  font-size: 15px;
+}
+
+.content .contactcontain .innerwrapper .third-row form textarea {
+  width: 80%;
+}
+
+.content .contactcontain .innerwrapper .third-row form textarea[placeholder="Message"] {
+  font-size: 15px;
+}
+
+.content .contactcontain .innerwrapper .third-row form button {
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(255, 0, 0, 0);
+  border: 0.1px solid black;
+  color: black;
+}
+/*# sourceMappingURL=contact.css.map */

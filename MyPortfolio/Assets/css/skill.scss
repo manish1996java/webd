@@ -1,0 +1,33 @@
+.content{
+    overflow: scroll;
+    h3{
+        margin-top:30px;
+        text-align: center; 
+        font-weight: 600;
+        font-size: 25px;
+          
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 20%;
+            border-bottom: 4px solid black;
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 20%;
+            border-bottom: 4px solid black;
+        }
+    }
+    .container{
+        .innercontainer{
+            .box{
+                p{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+            
+        }
+    }
+}

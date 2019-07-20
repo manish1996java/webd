@@ -1,0 +1,54 @@
+#aboutmecontent {
+  overflow: scroll;
+  font-size: 20px;
+  padding: 20px;
+}
+
+#aboutmecontent .aboutme {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#aboutmecontent .aboutme .image {
+  width: 20%;
+  margin: 0 auto;
+}
+
+#aboutmecontent .aboutme .image img {
+  width: 100%;
+  min-width: 100px;
+}
+
+#aboutmecontent .aboutme .hero-detail {
+  text-align: center;
+}
+
+#aboutmecontent .aboutme h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+#aboutmecontent .aboutme h3::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  border-bottom: 4px solid black;
+}
+
+#aboutmecontent .aboutme h3::before {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  border-bottom: 4px solid black;
+}
+
+.heightcolor {
+  color: green;
+}
+
+.boldheighlight {
+  margin: 0px 0px;
+  font-size: 40px;
+}
+/*# sourceMappingURL=aboutme.css.map */
