@@ -313,6 +313,7 @@ a {
 }
 
 .header {
+  overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(#F8E99B), color-stop(#EFC27B), color-stop(#E592BF), to(#B681D5));
   background: linear-gradient(to right, #F8E99B, #EFC27B, #E592BF, #B681D5);
   -ms-grid-row: 1;
@@ -328,7 +329,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.5em 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
 }
 
 .header .mydevimg {
@@ -343,22 +347,51 @@ a {
   margin-left: 20px;
   font-size: 20px;
   font-weight: 700;
+  width: 100%;
+}
+
+.header #mydimg {
+  opacity: 0.9;
+  bottom: -130px;
+  left: 0px;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header #mydimg img {
+  padding: 0px;
+}
+
+.header nav {
+  width: 100%;
 }
 
 .header nav ul {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header nav ul li {
-  padding: 0px 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  display: inline;
 }
 
 .header nav ul li a {
+  display: inline-block;
+  padding: 10% 10%;
   color: #ffffff;
   opacity: 0.5;
   font-weight: 700;
@@ -434,6 +467,9 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.5em 0;
 }
 
@@ -448,8 +484,8 @@ a {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 70px 600px 200px;
-      grid-template-rows: 70px 600px 200px;
+  -ms-grid-rows: 60px 600px 200px;
+      grid-template-rows: 60px 600px 200px;
       grid-template-areas: "header" "content" "footer";
 }
 
@@ -460,6 +496,9 @@ a {
   }
   .header .logo {
     font-size: 18px;
+  }
+  .header .sidebar {
+    text-transform: uppercase;
   }
   .footer i {
     font-size: 0.6em;
