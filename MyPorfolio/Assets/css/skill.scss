@@ -1,4 +1,5 @@
 .content{
+    overflow: scroll;
     h3{
         margin-top:30px;
         text-align: center; 
@@ -26,6 +27,7 @@
                     font-weight: 600;
                 }
             }
+            
         }
     }
 }

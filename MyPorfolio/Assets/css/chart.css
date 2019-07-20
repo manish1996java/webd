@@ -1,5 +1,4 @@
 .content .container {
-  height: 50vh;
   display: block;
   margin-top: 150px;
 }
@@ -31,6 +30,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -52,8 +54,8 @@
 
 @media screen and (max-width: 772px) {
   .content .container .innercontainer .box .chart {
-    width: 40px;
-    height: 40px;
+    width: 61px;
+    height: 91px;
     font-size: 20px;
     line-height: 80px;
   }
@@ -69,6 +71,8 @@
   .content .container .innercontainer .box .chart canvas {
     width: 50px;
     height: 50px;
+    top: -11px;
+    left: -30px;
   }
 }
 /*# sourceMappingURL=chart.css.map */

@@ -125,9 +125,11 @@ a{
 }
 @media (max-width: 600px){
     .header{
-        font-size: 0.6em;
+        // font-size: 0.6em;
+        font-size: 12px;
         padding: 3em 0px;
         .logo{
+            display: none;
             font-size: 18px;
         }
     }    
@@ -216,4 +218,9 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.theading{
+    color: black; 
+    font-weight:700;
+    font-size:20px;
 }

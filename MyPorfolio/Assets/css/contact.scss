@@ -1,4 +1,7 @@
 .content{
+    @media screen and (max-width: 772px){
+    overflow: scroll;
+    }
     h3{
         margin-top:30px;
         text-align: center; 
@@ -31,6 +34,8 @@
                 display: flex;
                 justify-content: space-between;
                 .info-box{
+                    box-sizing: border-box;
+                    word-wrap: break-word;
                     width: 25%;
                     i{
                         font-size: 20px;

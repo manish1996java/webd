@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="./Assets/css/style.css">
@@ -17,14 +17,18 @@
             var img = document.getElementById("profile-img");
             console.log(loadingoverlay);
 
-            img.addEventListener("mouseover", function () {
-                console.log("hey")
-                img.src = "./Assets/image/circle-cropped.png";
+            var hireme = document.querySelector("#hireMe");
+            hireme.addEventListener("click",()=>{
+                alert("thank you :)...  !");
             })
-            img.addEventListener("mouseout", function () {
-                console.log("hey")
-                img.src = "./Assets/image/prof.png";
-            })
+            // img.addEventListener("mouseover", function () {
+            //     console.log("hey")
+            //     img.src = "./Assets/image/circle-cropped.png";
+            // })
+            // img.addEventListener("mouseout", function () {
+            //     console.log("hey")
+            //     img.src = "./Assets/image/prof.png";
+            // })
         }
     </script>
 </head>
@@ -50,7 +54,7 @@
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="./aboutme.html">About Me</a></li>
                     <li><a href="./skill.html">Skill</a></li>
-                    <li><a href="./qualification.html">Qualification</a></li>
+                    <li><a href="./qualification.html">Resume</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li class="mydevimg"><img src="./Assets/image/mydev.svg" alt=""> </li>
                 </ul>
@@ -58,12 +62,12 @@
         </header>
         <div class="content" div="mycontent">
             <div class="hero">
-                <img id="profile-img" src="./Assets/image/prof.png" alt="">
+                <img id="profile-img" src="./Assets/image/circle-cropped.png" alt="">
                 <div class="hero-detail">
                     <h2>Passinate <br> UI Developer</h2>
-                    <p><i class="fas fa-quote-left"> </i> I am from delhi Avantika. I crazy about my work. i do my
+                    <p><i class="fas fa-quote-left"> </i> I am <span style="font-weight: 700;font-size: 18px;">MANISH KUMAR</span> from delhi. I crazy about my work. i do my
                         work efficiently <i class="fas fa-quote-right"></i></p>
-                    <a href="" class="action-button">Hire Me</a>
+                    <a href="" id="hireMe" class="action-button" style="margin-right:20px;">Hire Me</a>  <a href="https://drive.google.com/open?id=1JMWDpQalvFEw2_g2haxEXOZ8lgVhN1JE" class="action-button" style=" width: 200px;">Resume download</a>
                 </div>
             </div>
         </div>
