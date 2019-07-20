@@ -121,9 +121,24 @@ a{
     grid-template-columns: 1fr;
     grid-template-rows: 70px 600px 200px;
     grid-template-areas: "header" "content" "footer";
-
 }
+
 @media (max-width: 600px){
+    .header{
+        // font-size: 0.6em;
+        font-size: 12px;
+        padding: 3em 0px;
+        .logo{
+            font-size: 18px;
+        }
+    }    
+    .footer{
+        i{
+            font-size: 0.6em;
+        }
+    }
+}
+@media (max-width: 400px){
     .header{
         // font-size: 0.6em;
         font-size: 12px;
@@ -133,11 +148,6 @@ a{
             font-size: 18px;
         }
     }    
-    .footer{
-        i{
-            font-size: 0.6em;
-        }
-    }
 }
 @media (min-width:1040px){
     .container{
@@ -197,7 +207,7 @@ a{
                 flex-direction: column;
                 align-items: center;
                 li{
-                    padding: 1em 0px;
+                    padding: 1.3em 0px;
                 }
             }
         }

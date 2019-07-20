@@ -459,11 +459,21 @@ a {
     padding: 3em 0px;
   }
   .header .logo {
-    display: none;
     font-size: 18px;
   }
   .footer i {
     font-size: 0.6em;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    font-size: 12px;
+    padding: 3em 0px;
+  }
+  .header .logo {
+    display: none;
+    font-size: 18px;
   }
 }
 
@@ -547,7 +557,7 @@ a {
             align-items: center;
   }
   .header nav ul li {
-    padding: 1em 0px;
+    padding: 1.3em 0px;
   }
 }
 
