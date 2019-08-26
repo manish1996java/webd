@@ -30,6 +30,22 @@ nav{
         font-size: 30px;
     }
 }
+@media(max-width: 400px){
+    #header{
+        
+        min-height: 500px;
+    }
+    
+    #header p{
+        font-size: 10px;
+    }
+    #header h2{
+        font-size: 25px;
+    }
+    #header button{
+        padding-top: 8px
+    }
+}
 .black-overlay{
     position: absolute;
     width: 100%;
