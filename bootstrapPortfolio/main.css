@@ -1,0 +1,88 @@
+nav{
+    background-color: rgba(0, 0, 0, 0.372);
+    box-shadow: 0px 2px 4px rgba(62, 62, 62, 0.708);
+}
+#header{
+    padding: 100px;
+    min-height: 600px;
+    background-image: url('https://colorlib.com/preview/theme/portfolio/img/header-bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+@media(max-width: 992px){
+    #header{
+        min-height: 500px;
+    }
+    #header h2{
+        font-size: 50px;
+    }
+}
+@media(max-width: 576px){
+    #header{
+        min-height: 450px;
+    }
+    #header p{
+        font-size: 14px;
+    }
+    #header h2{
+        font-size: 30px;
+    }
+}
+.black-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    background-color: rgba(0, 0, 0, 0.564)
+}
+
+#skills .card{
+    box-shadow:  0px 2px 5px 1px rgba(62, 62, 62, 0.708);
+    transition: 0.5s;
+}
+#skills .card:hover{
+    box-shadow:  1px 4px 14px 5px rgba(62, 62, 62, 0.708);
+}
+
+
+#showcase{
+    position: relative;
+    background-image: url('https://www.asset.alakmalak.com/images/hire-angularjs-developer-ban.jpg');
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+#showcase i{
+    font-size: 70px;
+    background-color: rgba(255, 255, 255, 0.536);
+}
+#about{
+    background-color: #1976d2;
+    background: linear-gradient(145deg,#0d47a1,#42a5f5);
+    color: #fff;
+}
+
+#contact{
+    position: relative;
+    background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/12/programming-wallpaper9-700x394.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contact i{
+    font-size: 1.5em;
+}
+#footer{
+
+}
+/* #skill{
+    position: relative;
+}
+.card-collection{
+    position: absolute;
+} */
